@@ -9,12 +9,13 @@ class OpenAIClient:
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         self.model = model
 
-    def generate(self, prompt: str) -> str:
-        """
-        Send a simple text prompt to the model and return the response text.
-        """
+
+    def generate(self, prompt: str, max_tokens: int = 1000) -> str:
         response = self.client.responses.create(
             model=self.model,
             input=prompt,
+            max_output_tokens=max_tokens
         )
         return response.output_text
+
+print("SSL_CERT_FILE:", os.getenv("SSL_CERT_FILE"))
