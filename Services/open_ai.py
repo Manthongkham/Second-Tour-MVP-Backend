@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class OpenAIClient:
-    def __init__(self, model: str = "gpt-5.1"):
+    def __init__(self, model: str = "gpt-5.2"):
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         self.model = model
 
@@ -18,4 +18,3 @@ class OpenAIClient:
         )
         return response.output_text
 
-print("SSL_CERT_FILE:", os.getenv("SSL_CERT_FILE"))

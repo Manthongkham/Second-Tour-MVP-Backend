@@ -8,7 +8,7 @@ Rules:
 - Use bullet points.
 - Ask 1-3 follow-up questions only if needed.
 - No diagrams.
-- Keep the response under ~750 tokens.
+- ALL responses must be wrap up within 750 tokens. This is a hard stop and do not end mid sentences.
 
 User question:
 {query}

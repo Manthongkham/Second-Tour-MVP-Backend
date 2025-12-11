@@ -10,7 +10,7 @@ class QueryRequest(BaseModel):
     query: str
 
 @router.post("/stream")
-def run_query(payload: QueryRequest):
-    prompt = final_answer(payload.query)
+def run_query(user_input: QueryRequest):
+    prompt = final_answer(user_input.query)
     answer = llm.generate(prompt, max_tokens=1000)
     return {"answer": answer}
