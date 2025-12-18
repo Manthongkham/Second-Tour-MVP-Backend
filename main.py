@@ -7,7 +7,7 @@ app.include_router(router)
 
 origins = [
     "http://localhost:5173",
-    "https://second-tour-mvp-frontend.vercel.app/",
+    "https://second-tour-mvp-frontend.vercel.app",
 ]
 
 
